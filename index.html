@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width,
+              initial-scale=1' />
+    </head>
+    <body>
+        <button id='test-notification'>
+            Test notification
+        </button>
+
+        <script>
+          navigator.serviceWorker.register('./sw.js');
+
+          // var button = document.getElementById('test-notification');
+
+          window.setInterval( () => {
+
+            Notification.requestPermission( () => {
+
+              navigator.serviceWorker.ready
+              .then( (registration) => {
+
+                var options = {
+                  body: 'This is the body\n\nLine breaks are allowed.',
+                  icon: 'https://www.gdnmobilelab.com/workshop/icon.png',
+                  badge: 'https://www.gdnmobilelab.com/workshop/badge.png',
+                  silent: true
+                };
+
+                registration.active.postMessage({
+                  title: "Test Notification",
+                  options: options
+                });
+              })
+            })
+          }, 3000);
+        </script>
+    </body>
+</html>
