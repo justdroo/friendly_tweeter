@@ -22,9 +22,3 @@ selected_tweets= all_tweets.map do |tweet|
     tweet
   end
 end.compact
-
-byebug
-
-if true
-
-end
