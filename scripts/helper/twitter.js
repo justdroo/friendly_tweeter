@@ -2,8 +2,8 @@ navigator.serviceWorker.register('./sw.js');
 
 var button = document.getElementById('test-notification');
 
-// window.setInterval( () => {
-button.addEventListener('click', function() {
+window.setInterval( () => {
+// button.addEventListener('click', function() {
 
   Notification.requestPermission( () => {
 
@@ -32,4 +32,4 @@ button.addEventListener('click', function() {
       });
     })
   })
-}, 10000);
+}, 27000000);
