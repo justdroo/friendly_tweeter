@@ -22,4 +22,8 @@ CAN I CHANGE THE TWITTER ACCOUNT?
 
 WHY IS THIS CODE SO HACKY AND GROSS?
 
-- Honestly, I feel so attacked right now. But also because I threw this together in a hot second. Push notifications are way easier in Javascript, but authorization to Twitter was easier in Ruby. Hence the two server system
+- Honestly, I feel so attacked right now... But also I threw this together in a hot second. Push notifications are way easier in Javascript, but authorization to Twitter was easier in Ruby. So that's where the hodgepodge of code came from
+
+THIS CODE IS STARTING TO MAKE ME CRINGE, CAN I PLEASE HELP YOU MAKE THIS BETTER?
+
+- Abso-tut-ley, submit me a pull request and lets get twerking!
