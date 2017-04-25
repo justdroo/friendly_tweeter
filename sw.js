@@ -7,14 +7,14 @@ self.addEventListener('activate', () => {
 });
 
 self.addEventListener('message', (event) => {
-    // event.data is a simple object
-    var title = event.data.title;
-    var options = event.data.options;
+  // event.data is a simple object
+  var title = event.data.title;
+  var options = event.data.options;
 
-    self.registration.showNotification(
-        title,
-        options
-    );
+  self.registration.showNotification(
+    title,
+    options
+  );
 });
 
 self.addEventListener('notificationclick', function(e) {

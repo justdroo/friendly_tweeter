@@ -8,33 +8,8 @@
         <button id='test-notification'>
             Test notification
         </button>
-
-        <script>
-          navigator.serviceWorker.register('./sw.js');
-
-          // var button = document.getElementById('test-notification');
-
-          window.setInterval( () => {
-
-            Notification.requestPermission( () => {
-
-              navigator.serviceWorker.ready
-              .then( (registration) => {
-
-                var options = {
-                  body: 'This is the body\n\nLine breaks are allowed.',
-                  icon: 'https://www.gdnmobilelab.com/workshop/icon.png',
-                  badge: 'https://www.gdnmobilelab.com/workshop/badge.png',
-                  silent: true
-                };
-
-                registration.active.postMessage({
-                  title: "Test Notification",
-                  options: options
-                });
-              })
-            })
-          }, 3000);
-        </script>
+        <!-- <script data-main="scripts/main" src="scripts/require.js"></script> -->
+        <script src="sw.js" charset="utf-8"></script>
+        <script src="scripts/helper/twitter.js" charset="utf-8"></script>
     </body>
 </html>
